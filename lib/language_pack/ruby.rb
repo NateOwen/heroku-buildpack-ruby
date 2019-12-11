@@ -1067,6 +1067,7 @@ params = CGI.parse(uri.query || "")
   end
 
   def run_assets_precompile_rake_task
+    warn('run_assets_precompile_rake_task language_pack')
     instrument 'ruby.run_assets_precompile_rake_task' do
       warn('ruby language_pack run_assets_precompile_rake_task')
       precompile = rake.task("assets:precompile")
