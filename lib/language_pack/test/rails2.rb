@@ -63,9 +63,9 @@ FILE
       result = detect_schema_format
       case result.lines.last.chomp
       when "ruby"
-        schema_load    = rake.task("db:schema:load")
+        schema_load    = rake.task("app:db:schema:load")
       when "sql" # currently not a possible edge case, we think
-        structure_load = rake.task("db:structure:load")
+        structure_load = rake.task("app:db:structure:load")
       else
         puts "Could not determine schema/structure from `ActiveRecord::Base.schema_format`:\n#{result}"
       end
