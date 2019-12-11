@@ -10,6 +10,9 @@ class LanguagePack::Ruby
       setup_language_pack_environment
       setup_export
       setup_profiled
+      warn(<<-WARNING)
+Nate TEst
+WARNING
       allow_git do
         install_bundler_in_app
         build_bundler("development")
