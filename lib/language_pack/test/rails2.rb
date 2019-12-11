@@ -53,7 +53,7 @@ FILE
 
   private
   def db_prepare_test_rake_tasks
-    schema_load    = rake.task("db:schema:load_if_ruby")
+    schema_load    = rake.task("db:schema:load")
     structure_load = rake.task("db:structure:load_if_sql")
     db_migrate     = rake.task("db:migrate")
 
