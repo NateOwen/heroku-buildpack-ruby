@@ -964,7 +964,7 @@ params = CGI.parse(uri.query || "")
 
       topic "Detecting rake tasks"
       rake = LanguagePack::Helpers::RakeRunner.new(rake_gem_available)
-      rake.load_rake_tasks!({ env: rake_env }, raise_on_fail)
+      rake.load_rake_tasks!({ env: rake_env }, false)
       rake
     end
   end
