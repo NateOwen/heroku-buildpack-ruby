@@ -37,6 +37,7 @@ class LanguagePack::Rails4 < LanguagePack::Rails3
   end
 
   def compile
+    warn('rails 4 language_pack/test/ruby.rb def compile')
     instrument "rails4.compile" do
       super
     end

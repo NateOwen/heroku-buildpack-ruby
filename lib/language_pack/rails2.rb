@@ -57,6 +57,7 @@ class LanguagePack::Rails2 < LanguagePack::Ruby
   end
 
   def compile
+    warn('rails 2 language_pack/test/ruby.rb def compile')
     instrument "rails2.compile" do
       install_plugins
       super

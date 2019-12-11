@@ -15,6 +15,7 @@ class LanguagePack::Rails6 < LanguagePack::Rails5
   end
 
   def compile
+    warn('rails6 language_pack/test/ruby.rb def compile')
     instrument "rails6.compile" do
       FileUtils.mkdir_p("tmp/pids")
       super

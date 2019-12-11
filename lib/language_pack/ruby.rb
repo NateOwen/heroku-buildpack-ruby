@@ -87,6 +87,7 @@ WARNING
   end
 
   def compile
+    warn('language_pack/ruby.rb def compile')
     instrument 'ruby.compile' do
       # check for new app at the beginning of the compile
       warn(<<-WARNING)

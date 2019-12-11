@@ -79,6 +79,7 @@ class LanguagePack::Base
 
   # this is called to build the slug
   def compile
+    warn('base language_pack/test/ruby.rb def compile')
     write_release_yaml
     instrument 'base.compile' do
       Kernel.puts ""

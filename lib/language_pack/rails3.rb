@@ -38,6 +38,7 @@ class LanguagePack::Rails3 < LanguagePack::Rails2
   end
 
   def compile
+    warn('rails 3 language_pack/test/ruby.rb def compile')
     instrument "rails3.compile" do
       super
     end
