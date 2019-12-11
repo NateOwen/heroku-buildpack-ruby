@@ -180,7 +180,7 @@ WARNING
           puts "Detected manifest.yml, assuming assets were compiled locally"
           return true
         end
-
+        warn('rails3 run_assets_precompile_rake_task')
         precompile = rake.task("assets:precompile")
         return true unless precompile.is_defined?
 
