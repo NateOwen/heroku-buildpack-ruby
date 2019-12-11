@@ -80,7 +80,7 @@ WARNING
           puts "Detected manifest file, assuming assets were compiled locally"
           return true
         end
-
+        puts 'testing!!!rails4'
         precompile = rake.task("assets:precompile")
         return true unless precompile.is_defined?
 
