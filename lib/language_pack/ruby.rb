@@ -89,6 +89,7 @@ WARNING
   def compile
     instrument 'ruby.compile' do
       # check for new app at the beginning of the compile
+      warn('NATETEST start')
       new_app?
       Dir.chdir(build_path)
       remove_vendor_bundle
@@ -104,6 +105,7 @@ WARNING
         post_bundler
         create_database_yml
         install_binaries
+        warn('NATETEST precompile')
         # run_assets_precompile_rake_task
       end
       config_detect
