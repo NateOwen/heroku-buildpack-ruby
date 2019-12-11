@@ -1,6 +1,7 @@
 #module LanguagePack::Test::Ruby
 class LanguagePack::Ruby
   def compile
+    warn('language_pack/test/ruby.rb def compile')
     instrument 'ruby.test.compile' do
       new_app?
       Dir.chdir(build_path)
