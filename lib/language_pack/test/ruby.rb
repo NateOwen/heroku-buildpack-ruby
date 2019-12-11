@@ -11,7 +11,7 @@ class LanguagePack::Ruby
       setup_export
       setup_profiled
       warn(<<-WARNING)
-Nate TEst
+Nate TEst test/ruby.rb
 WARNING
       allow_git do
         install_bundler_in_app

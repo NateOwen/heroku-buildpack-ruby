@@ -90,7 +90,7 @@ WARNING
     instrument 'ruby.compile' do
       # check for new app at the beginning of the compile
       warn(<<-WARNING)
-Nate TEst
+Nate TEst LanguagePack/ruby.rb
 WARNING
       new_app?
       Dir.chdir(build_path)
