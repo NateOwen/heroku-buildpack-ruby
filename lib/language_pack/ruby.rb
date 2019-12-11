@@ -89,7 +89,10 @@ WARNING
   def compile
     instrument 'ruby.compile' do
       # check for new app at the beginning of the compile
-      warn('NATETEST start')
+      warn(<<-WARNING)
+Nate TEst
+WARNING
+    end
       new_app?
       Dir.chdir(build_path)
       remove_vendor_bundle
