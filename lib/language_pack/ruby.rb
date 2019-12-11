@@ -92,7 +92,6 @@ WARNING
       warn(<<-WARNING)
 Nate TEst
 WARNING
-    end
       new_app?
       Dir.chdir(build_path)
       remove_vendor_bundle
