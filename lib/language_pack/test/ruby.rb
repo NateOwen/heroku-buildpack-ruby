@@ -21,6 +21,7 @@ WARNING
         install_binaries
         prepare_tests
       end
+      warn('going to super')
       super
     end
   end
