@@ -87,12 +87,8 @@ WARNING
   end
 
   def compile
-    warn('language_pack/ruby.rb def compile')
     instrument 'ruby.compile' do
       # check for new app at the beginning of the compile
-      warn(<<-WARNING)
-Nate TEst LanguagePack/ruby.rb
-WARNING
       new_app?
       Dir.chdir(build_path)
       remove_vendor_bundle
@@ -108,8 +104,6 @@ WARNING
         post_bundler
         create_database_yml
         install_binaries
-        warn('NATETEST precompile')
-        # run_assets_precompile_rake_task
       end
       config_detect
       best_practice_warnings
@@ -1068,9 +1062,7 @@ params = CGI.parse(uri.query || "")
   end
 
   def run_assets_precompile_rake_task
-    warn('run_assets_precompile_rake_task language_pack')
     instrument 'ruby.run_assets_precompile_rake_task' do
-      warn('ruby language_pack run_assets_precompile_rake_task')
       precompile = rake.task("assets:precompile")
       return true unless precompile.is_defined?
 

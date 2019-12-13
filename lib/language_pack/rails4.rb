@@ -37,7 +37,6 @@ class LanguagePack::Rails4 < LanguagePack::Rails3
   end
 
   def compile
-    warn('rails 4 language_pack/test/ruby.rb def compile')
     instrument "rails4.compile" do
       super
     end
@@ -75,14 +74,12 @@ WARNING
   end
 
   def run_assets_precompile_rake_task
-    warn('run_assets_precompile_rake_task rails 4')
     instrument "rails4.run_assets_precompile_rake_task" do
       log("assets_precompile") do
         if Dir.glob("public/assets/{.sprockets-manifest-*.json,manifest-*.json}", File::FNM_DOTMATCH).any?
           puts "Detected manifest file, assuming assets were compiled locally"
           return true
         end
-        warn('NATESTEST rails4 run_assets_precompile_rake_task')
         precompile = rake.task("assets:precompile")
         return true unless precompile.is_defined?
 

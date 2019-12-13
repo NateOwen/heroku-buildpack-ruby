@@ -1,7 +1,6 @@
 #module LanguagePack::Test::Ruby
 class LanguagePack::Ruby
   def compile
-    warn('language_pack/test/ruby.rb def compile')
     instrument 'ruby.test.compile' do
       new_app?
       Dir.chdir(build_path)
@@ -11,9 +10,6 @@ class LanguagePack::Ruby
       setup_language_pack_environment
       setup_export
       setup_profiled
-      warn(<<-WARNING)
-Nate TEst test/ruby.rb
-WARNING
       allow_git do
         install_bundler_in_app
         build_bundler("development")
@@ -22,7 +18,6 @@ WARNING
         install_binaries
         prepare_tests
       end
-      warn('going to super')
       super
     end
   end
